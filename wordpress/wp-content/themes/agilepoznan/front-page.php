@@ -37,7 +37,7 @@ if ( $query->have_posts() ) {
 
 <div class="cover-container">
 
-    <h1>Poznań Agile User Group</h1>
+    <h1>Poznań Agile<br>User Group</h1>
     <?php
     if ( count($first_meeting) ):
     ?>

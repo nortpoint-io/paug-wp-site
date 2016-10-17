@@ -1,0 +1,16 @@
+body {
+    background-color: #000;
+    background-image: url('./img/ballet-cropped.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.cover-container {
+    h1, a, .next-meeting-date {
+        font-family: 'Cardo', serif;
+    }
+}

@@ -382,6 +382,9 @@
                             "placeholder": "",
                             "size_height": "default"
                         },
+                        "file": {
+                            "enable_extended_return_values": "1"
+                        },
                         "post": {
                             "additional_arguments": ""
                         },
@@ -394,6 +397,9 @@
                     },
                     "type_textarea_options": {
                         "size_height": "default"
+                    },
+                    "type_file_options": {
+                        "enable_extended_return_values": "1"
                     },
                     "type_post_options": {
                         "additional_arguments": ""

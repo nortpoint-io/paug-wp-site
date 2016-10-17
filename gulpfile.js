@@ -1,43 +1,43 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var del = require('del');
-var csso = require('gulp-csso');
-var fs = require('fs');
-var header = require('gulp-header');
-var sequence = require('run-sequence');
-var zip = require('gulp-zip');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const del = require('del');
+const csso = require('gulp-csso');
+const fs = require('fs');
+const header = require('gulp-header');
+const sequence = require('run-sequence');
+const zip = require('gulp-zip');
 
-var THEME_NAME = 'agilepoznan';
-var SRC_DIR = 'wordpress/wp-content/themes/' + THEME_NAME;
-var THEME_FILE = THEME_NAME + '.zip';
+const THEME_NAME = 'agilepoznan';
+const SRC_DIR = `wordpress/wp-content/themes/${THEME_NAME}`;
+const THEME_FILE = `${THEME_NAME}.zip`;
 
-gulp.task('clean', function() {
+gulp.task('clean', () => {
     return del(THEME_FILE);
 });
 
-gulp.task('styles', function() {
-    return gulp.src(SRC_DIR + '/scss/*.scss')
+gulp.task('styles', () => {
+    return gulp.src(`${SRC_DIR}/scss/*.scss`)
         .pipe(sass())
         .pipe(csso())
-		.pipe(header(fs.readFileSync(SRC_DIR + '/version-info.txt', 'utf8')))
+		.pipe(header(fs.readFileSync(`${SRC_DIR}/version-info.txt`, 'utf8')))
         .pipe(gulp.dest(SRC_DIR));
 });
 
-gulp.task('watch', ['styles'], function() {
-	gulp.watch(SRC_DIR + '/scss/*.scss', ['styles']);
+gulp.task('watch', ['styles'], () => {
+	gulp.watch(`${SRC_DIR}/scss/*.scss`, ['styles']);
 });
 
-gulp.task('zip', function() {
+gulp.task('zip', () => {
 	return gulp.src([
-		SRC_DIR + '/**/*',
-		'!' + SRC_DIR + '/scss',
-		'!' + SRC_DIR + '/version-info.txt'
+		`${SRC_DIR}/**/*`,
+		`!${SRC_DIR}/scss`,
+		`!${SRC_DIR}/version-info.txt`
 	])
 	.pipe(zip(THEME_FILE))
 	.pipe(gulp.dest('.'));
 });
 
-gulp.task('build', function(callback) {
+gulp.task('build', (callback) => {
 	sequence(
 		'styles',
 		'clean',

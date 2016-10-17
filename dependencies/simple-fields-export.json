@@ -1,0 +1,460 @@
+{
+    "field_groups": {
+        "1": {
+            "id": 1,
+            "key": "spotkanie",
+            "slug": "spotkanie",
+            "name": "Spotkanie",
+            "description": "miejsce i czas spotkania",
+            "repeatable": false,
+            "fields": {
+                "1": {
+                    "name": "Kiedy",
+                    "slug": "data",
+                    "description": "",
+                    "type": "date_v2",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "datetime",
+                            "show": "on_click",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "1",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 1,
+                        "name": "Spotkanie",
+                        "slug": "spotkanie",
+                        "description": "miejsce i czas spotkania",
+                        "repeatable": false,
+                        "fields_count": 4
+                    }
+                },
+                "2": {
+                    "name": "Miejsce",
+                    "slug": "miejsce",
+                    "description": "",
+                    "type": "text",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "date",
+                            "show": "always",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "Miejsce spotkania",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "2",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 1,
+                        "name": "Spotkanie",
+                        "slug": "spotkanie",
+                        "description": "miejsce i czas spotkania",
+                        "repeatable": false,
+                        "fields_count": 4
+                    }
+                },
+                "3": {
+                    "name": "Adres 1",
+                    "slug": "adres1",
+                    "description": "Adres spotkania (ulica, nr)",
+                    "type": "text",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "date",
+                            "show": "always",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "3",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 1,
+                        "name": "Spotkanie",
+                        "slug": "spotkanie",
+                        "description": "miejsce i czas spotkania",
+                        "repeatable": false,
+                        "fields_count": 4
+                    }
+                },
+                "4": {
+                    "name": "Adres 2",
+                    "slug": "adres2",
+                    "description": "Adres spotkania (miasto, kraj)",
+                    "type": "text",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "date",
+                            "show": "always",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "4",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 1,
+                        "name": "Spotkanie",
+                        "slug": "spotkanie",
+                        "description": "miejsce i czas spotkania",
+                        "repeatable": false,
+                        "fields_count": 4
+                    }
+                }
+            },
+            "fields_by_slug": [],
+            "deleted": false,
+            "gui_view": "table",
+            "added_with_code": false,
+            "fields_count": 4
+        },
+        "2": {
+            "id": 2,
+            "key": "prelegent",
+            "slug": "prelegent",
+            "name": "Prelegent",
+            "description": "",
+            "repeatable": false,
+            "fields": {
+                "1": {
+                    "name": "Imi\u0119 i nazwisko",
+                    "slug": "imienazwisko",
+                    "description": "",
+                    "type": "text",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "date",
+                            "show": "always",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "1",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 2,
+                        "name": "Prelegent",
+                        "slug": "prelegent",
+                        "description": "",
+                        "repeatable": false,
+                        "fields_count": 3
+                    }
+                },
+                "2": {
+                    "name": "Firma",
+                    "slug": "firma",
+                    "description": "",
+                    "type": "text",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "date",
+                            "show": "always",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "2",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 2,
+                        "name": "Prelegent",
+                        "slug": "prelegent",
+                        "description": "",
+                        "repeatable": false,
+                        "fields_count": 3
+                    }
+                },
+                "3": {
+                    "name": "Avatar",
+                    "slug": "avatar",
+                    "description": "",
+                    "type": "file",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "date",
+                            "show": "always",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "3",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 2,
+                        "name": "Prelegent",
+                        "slug": "prelegent",
+                        "description": "",
+                        "repeatable": false,
+                        "fields_count": 3
+                    }
+                }
+            },
+            "fields_by_slug": [],
+            "deleted": false,
+            "gui_view": "table",
+            "added_with_code": false,
+            "fields_count": 3
+        }
+    },
+    "post_connectors": {
+        "2": {
+            "id": 2,
+            "key": "meetinginfo",
+            "slug": "meetinginfo",
+            "name": "Info o spotkaniu",
+            "field_groups": {
+                "1": {
+                    "id": "1",
+                    "name": "Spotkanie",
+                    "deleted": "0",
+                    "context": "normal",
+                    "priority": "high"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Prelegent",
+                    "deleted": "0",
+                    "context": "normal",
+                    "priority": "high"
+                }
+            },
+            "post_types": [
+                "post"
+            ],
+            "deleted": false,
+            "hide_editor": false,
+            "added_with_code": false,
+            "field_groups_count": 2
+        }
+    },
+    "post_type_defaults": {
+        "post": 2
+    }
+}

@@ -4,7 +4,7 @@
   "description": "template for paug site",
   "scripts": {
     "start": "gulp",
-	"build": "gulp build",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +17,8 @@
     "gulp": "^3.9.1",
     "gulp-csso": "^2.0.0",
     "gulp-header": "^1.8.8",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-zip": "^3.2.0",
+    "run-sequence": "^1.2.2"
   }
 }

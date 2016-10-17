@@ -7,6 +7,5 @@ wp_template:
   script:
     - npm run build
   artifacts:
-    name: agilepoznan
     paths:
-      - agilepoznan/
+      - agilepoznan.zip

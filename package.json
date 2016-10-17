@@ -1,0 +1,21 @@
+{
+  "name": "paug-wp-site",
+  "version": "0.1.0",
+  "description": "template for paug site",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.nortpoint.io/paug/paug-wp-site.git"
+  },
+  "author": "nortpoint.io",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-header": "^1.8.8",
+    "gulp-sass": "^2.3.2"
+  }
+}

@@ -6,6 +6,7 @@ const fs = require('fs');
 const header = require('gulp-header');
 const sequence = require('run-sequence');
 const zip = require('gulp-zip');
+const browserSync = require('browser-sync').create();
 
 const THEME_NAME = 'agilepoznan';
 const SRC_DIR = `wordpress/wp-content/themes/${THEME_NAME}`;
@@ -20,11 +21,17 @@ gulp.task('styles', () => {
         .pipe(sass())
         .pipe(csso())
 		.pipe(header(fs.readFileSync(`${SRC_DIR}/version-info.txt`, 'utf8')))
-        .pipe(gulp.dest(SRC_DIR));
+        .pipe(gulp.dest(SRC_DIR))
+		.pipe(browserSync.stream());
 });
 
-gulp.task('watch', ['styles'], () => {
+gulp.task('dev', ['styles'], () => {
+	browserSync.init({
+        proxy: 'localhost:8888'
+    });
+	
 	gulp.watch(`${SRC_DIR}/scss/*.scss`, ['styles']);
+	gulp.watch(`${SRC_DIR}/**/*.php`, browserSync.reload);
 });
 
 gulp.task('zip', () => {
@@ -46,4 +53,4 @@ gulp.task('build', (callback) => {
 	);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['dev']);

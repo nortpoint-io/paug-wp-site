@@ -26,7 +26,10 @@ if ( $query->have_posts() ) {
             $first_meeting["address2"] = simple_fields_value("adres2");
             $first_meeting["speaker"] = simple_fields_value("imienazwisko");
             $first_meeting["company"] = simple_fields_value("firma");
+            // http://simple-fields.com/documentation/field-types/file/
             $first_meeting["avatar"] = simple_fields_value("avatar")["image_src"]["thumbnail"];
+            $first_meeting["title"] = get_the_title();
+            $first_meeting["excerpt"] = get_the_excerpt();
             break;
         }
 	}
@@ -63,6 +66,38 @@ if ( $query->have_posts() ) {
         <a href="#" class="button">Join LinkedIn Group</a>
     </div>
 </div>
+<?php
+if ( count($first_meeting) ):
+?>
+<div class="border"></div>
+<div class="white-container">
+    <div class="container">
+        <h1>Next meetup</h1>
+        <h2>Check next meetup line-up and topic</h2>
+
+        <div class="clearfix">
+            <div class="speaker">
+                <div class="speaker-avatar">
+                    <img src="<?php echo $first_meeting["avatar"][0]; ?>" alt="">
+                </div>
+                <div class="speaker-details">
+                    <p>
+                        <span class="speaker-name"><?php echo $first_meeting["speaker"]; ?></span>
+                        <span class="speaker-company"><?php echo $first_meeting["company"]; ?></span>
+                    </p>
+                </div>
+            </div>
+            <div class="presentation">
+                <p class="presentation-title"><?php echo $first_meeting["title"]; ?></p>
+                <div class="presentation-excerpt"><?php echo $first_meeting["excerpt"]; ?></div>
+            </div>
+        </div>
+        <a href="#" class="button">Join our next meeting</a>
+    </div>
+</div>
+<?php
+endif;
+?>
 
 <?php wp_footer(); ?>
 </body>

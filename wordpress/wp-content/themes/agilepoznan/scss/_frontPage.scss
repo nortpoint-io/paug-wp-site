@@ -111,13 +111,93 @@ a {
     }
 }
 
+.border {
+    border-bottom: 1px solid $gray-light;
+}
+
 .button {
     background-color: $blue;
     color: $white;
     text-decoration: none;
     text-align: center;
-    padding: 8px;
+    padding: 15px;
     display: inline-block;
     border-radius: 4px;
     font-size: 1.2rem;
+
+    &:hover {
+        background-color: lighten($blue, 5%);
+    }
+}
+
+.speaker {
+    img {
+        border: 5px solid $gray-light;
+        border-radius: 50%;
+        max-width: 100%;
+    }
+
+    .speaker-details {
+        p {
+            text-align: center;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    .speaker-name {
+        color: $blue;
+        font-size: 1.3rem;
+    }
+
+    .speaker-company {
+        color: $gray;
+    }
+
+    @media(min-width: $screen-sm) {
+        .speaker-avatar, .speaker-details {
+            float: left;
+            width: 40%;
+        }
+
+        .speaker-avatar {
+            margin-left: 5%;
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        float: left;
+        margin-right: 2rem;
+        width: 33%;
+
+        .speaker-avatar, .speaker-details {
+            float: none;
+            width: auto;
+            margin-left: 0;
+        }
+    }
+}
+
+.presentation {
+    text-align: left;
+
+    .presentation-title {
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    @media(min-width: $screen-sm) {
+        clear: both;
+        padding-top: 1rem;
+    }
+
+    @media(min-width: $screen-md) {
+        display: inline;
+
+        .presentation-title {
+            margin-top: 0;
+        }
+    }
 }

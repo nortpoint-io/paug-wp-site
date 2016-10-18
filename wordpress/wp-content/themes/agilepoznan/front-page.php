@@ -35,8 +35,7 @@ if ( $query->have_posts() ) {
 }
 ?>
 
-<div class="cover-container">
-
+<div class="cover-container container">
     <h1>Poznań Agile<br>User Group</h1>
     <?php
     if ( count($first_meeting) ):
@@ -52,7 +51,17 @@ if ( $query->have_posts() ) {
     ?>
 
     <a href="#">Join our next meeting</a>
+</div>
 
+<div class="white-container">
+    <div class="container">
+        <h1>About PAUG</h1>
+        <h2>What is it all about</h2>
+        <p>Poznań Agile User Group is dedicated to Lean & Agile Software Project and Development Management for a local Lean & Agile community in a city of Poznań, Poland.</p>
+        <p>Feel free to join our next meeting or get in touch with us through LinkedIn group.</p>
+
+        <a href="#" class="button">Join LinkedIn Group</a>
+    </div>
 </div>
 
 <?php wp_footer(); ?>

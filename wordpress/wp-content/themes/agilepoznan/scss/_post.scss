@@ -23,3 +23,22 @@
         margin-top: 10px;
     }
 }
+
+.post-content, .post-summary, .post-thumbnail {
+    background-color: $white;
+    color: $black;
+}
+
+.post-summary {
+    font-family: 'Cardo', serif;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.post-thumbnail {
+    text-align: center;
+}
+
+.post-content {
+    line-height: 1.5rem;
+}

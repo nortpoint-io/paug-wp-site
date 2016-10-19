@@ -11,6 +11,19 @@
     }
 }
 
+@mixin make-thin-container() {
+    margin: 0 auto;
+    padding: 15px;
+
+    @media(min-width: $screen-lg) {
+        max-width: (940px * 0.7);
+    }
+
+    @media(min-width: $screen-xl) {
+        max-width: (1140px * 0.7);
+    }
+}
+
 @mixin make-clearfix() {
   &:before,
   &:after {

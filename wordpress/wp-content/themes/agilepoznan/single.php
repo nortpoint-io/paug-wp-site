@@ -35,6 +35,23 @@ while ( have_posts() ) : the_post();
 			<?php endif; ?>
 		</div>
 	</header>
+	<div class="post-summary">
+		<div class="container thin">
+			<?php the_excerpt(); ?>
+		</div>
+	</div>
+	<?php if ( has_post_thumbnail() ): ?>
+		<div class="post-thumbnail">
+			<div class="container">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+	<div class="post-content">
+		<div class="container thin">
+			<?php the_content(); ?>
+		</div>
+	</div>
 </article>
 <?php
 	// Include the single post content template.

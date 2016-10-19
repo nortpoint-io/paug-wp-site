@@ -31,4 +31,13 @@ a {
 
 .container {
     @include make-container();
+
+    &.thin {
+        @include make-thin-container();
+    }
+}
+
+.wp-post-image {
+    max-width: 100%;
+    height: auto;
 }

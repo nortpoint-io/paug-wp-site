@@ -300,7 +300,7 @@
                         "slug": "prelegent",
                         "description": "",
                         "repeatable": false,
-                        "fields_count": 3
+                        "fields_count": 4
                     }
                 },
                 "2": {
@@ -356,7 +356,7 @@
                         "slug": "prelegent",
                         "description": "",
                         "repeatable": false,
-                        "fields_count": 3
+                        "fields_count": 4
                     }
                 },
                 "3": {
@@ -418,7 +418,63 @@
                         "slug": "prelegent",
                         "description": "",
                         "repeatable": false,
-                        "fields_count": 3
+                        "fields_count": 4
+                    }
+                },
+                "4": {
+                    "name": "Bio",
+                    "slug": "bio",
+                    "description": "",
+                    "type": "textarea",
+                    "options": {
+                        "divider": {
+                            "appearance": "line"
+                        },
+                        "date_v2": {
+                            "show_as": "date",
+                            "show": "always",
+                            "default_date": "no_date"
+                        },
+                        "text": {
+                            "subtype": "text",
+                            "placeholder": "",
+                            "attributes": ""
+                        },
+                        "textarea": {
+                            "placeholder": "",
+                            "size_height": "default"
+                        },
+                        "post": {
+                            "additional_arguments": ""
+                        },
+                        "taxonomyterm": {
+                            "additional_arguments": ""
+                        },
+                        "dropdown": {
+                            "enable_multiple": "0"
+                        }
+                    },
+                    "type_textarea_options": {
+                        "size_height": "default"
+                    },
+                    "type_post_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_taxonomyterm_options": {
+                        "additional_arguments": ""
+                    },
+                    "type_dropdown_options": {
+                        "enable_multiple": "0"
+                    },
+                    "id": "4",
+                    "deleted": "0",
+                    "field_group": {
+                        "id": 2,
+                        "name": "Prelegent",
+                        "slug": "prelegent",
+                        "description": "",
+                        "repeatable": false,
+                        "fields_count": 4
                     }
                 }
             },
@@ -426,7 +482,7 @@
             "deleted": false,
             "gui_view": "table",
             "added_with_code": false,
-            "fields_count": 3
+            "fields_count": 4
         }
     },
     "post_connectors": {

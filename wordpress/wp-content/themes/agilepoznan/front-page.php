@@ -15,7 +15,8 @@
 <?php
 $first_meeting = array();
 $second_meeting = array();
-$query = new WP_Query( array( 'category_name' => 'spotkania' ) );
+$meetings_category = 'spotkania';
+$query = new WP_Query( array( 'category_name' => $meetings_category ) );
 if ( $query->have_posts() ) {
     while ( $query->have_posts() ) {
 		$query->the_post();
@@ -67,7 +68,7 @@ if ( $query->have_posts() ) {
     endif;
     ?>
 
-    <a href="#">Join our next meeting</a>
+    <a href="https://www.meetup.com/Poznan-Agile-User-Group/">Join our next meeting</a>
 </div>
 
 <div class="white-container">
@@ -77,7 +78,7 @@ if ( $query->have_posts() ) {
         <p>Poznań Agile User Group is dedicated to Lean & Agile Software Project and Development Management for a local Lean & Agile community in a city of Poznań, Poland.</p>
         <p>Feel free to join our next meeting or get in touch with us through LinkedIn group.</p>
 
-        <a href="#" class="button">Join LinkedIn Group</a>
+        <a href="https://www.linkedin.com/groups/4406793" class="button">Join LinkedIn Group</a>
     </div>
 </div>
 <?php
@@ -106,7 +107,7 @@ if ( count($first_meeting) ):
                 <div class="presentation-excerpt"><?php echo $first_meeting["excerpt"]; ?></div>
             </div>
         </div>
-        <a href="#" class="button">Join our next meeting</a>
+        <a href="https://www.meetup.com/Poznan-Agile-User-Group/" class="button">Join our next meeting</a>
     </div>
 </div>
 <?php
@@ -137,7 +138,7 @@ if ( count($second_meeting) ):
                 <div class="presentation-excerpt"><?php echo $second_meeting["excerpt"]; ?></div>
             </div>
         </div>
-        <a href="#" class="button">View our archive</a>
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( $meetings_category ) ) ); ?>" class="button">View our archive</a>
     </div>
 </div>
 <?php

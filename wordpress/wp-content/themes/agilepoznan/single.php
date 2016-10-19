@@ -29,17 +29,19 @@ while ( have_posts() ) : the_post();
 		<div class="container">
 			<?php the_title( sprintf( '<h1 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 			<?php if ( $meeting['speaker'] ): ?>
-			<p class="post-author"><?php echo $meeting['speaker']; ?></p>
+			<p class="post-author"><?php echo $meeting['speaker']; ?> - <?php echo $meeting['date']; ?></p>
 			<?php else: ?>
 			<p class="post-author"><?php echo get_the_author(); ?></p>
 			<?php endif; ?>
 		</div>
 	</header>
-	<div class="post-summary">
-		<div class="container thin">
-			<?php the_excerpt(); ?>
+	<?php if ( has_excerpt() ): ?>
+		<div class="post-summary">
+			<div class="container thin">
+				<?php the_excerpt(); ?>
+			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 	<?php if ( has_post_thumbnail() ): ?>
 		<div class="post-thumbnail">
 			<div class="container">

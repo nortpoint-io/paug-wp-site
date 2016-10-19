@@ -6,7 +6,7 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
-    <link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans|Open+Sans" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -20,7 +20,7 @@ if ( $query->have_posts() ) {
 		$query->the_post();
 
         if ( count(simple_fields_value("data")) > 0 ) {
-		    $first_meeting["date"] = simple_fields_value("data")["date_format"];
+		    $first_meeting["date"] = simple_fields_value("data")["date_time_format"];
             $first_meeting["place"] = simple_fields_value("miejsce");
             $first_meeting["address1"] = simple_fields_value("adres1");
             $first_meeting["address2"] = simple_fields_value("adres2");

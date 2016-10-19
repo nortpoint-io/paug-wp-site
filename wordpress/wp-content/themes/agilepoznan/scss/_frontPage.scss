@@ -10,7 +10,7 @@ body {
     background-position: center;
     background-size: cover;
     color: $white;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
     @media(min-width: $screen-md) {
         background-image: url('./img/ballet-992w.jpg');
@@ -60,6 +60,7 @@ a {
     }
 
     .next-meeting-data {
+        font-family: 'Josefin Sans', sans-serif;
         margin-top: 3rem;
         margin-bottom: 2rem;
 
@@ -89,7 +90,7 @@ a {
 
     h2 {
         color: $gray;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 100;
         margin-top: 0;
         margin-bottom: 4rem;

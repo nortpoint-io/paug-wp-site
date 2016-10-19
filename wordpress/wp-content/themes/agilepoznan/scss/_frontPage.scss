@@ -75,11 +75,10 @@ a {
     }
 }
 
-.white-container {
-    background-color: $white;
-    color: $black;
+.white-container, .gray-container {
     padding: 15px;
     text-align: center;
+    color: $black;
 
     h1 {
         color: $blue;
@@ -110,6 +109,14 @@ a {
         margin-top: 3rem;
         margin-bottom: 2rem;
     }
+}
+
+.white-container {
+    background-color: $white;
+}
+
+.gray-container {
+    background-color: $gray-light;
 }
 
 .border {

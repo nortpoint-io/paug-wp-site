@@ -14,23 +14,37 @@
 
 <?php
 $first_meeting = array();
+$second_meeting = array();
 $query = new WP_Query( array( 'category_name' => 'spotkania' ) );
 if ( $query->have_posts() ) {
     while ( $query->have_posts() ) {
 		$query->the_post();
 
         if ( count(simple_fields_value("data")) > 0 ) {
-		    $first_meeting["date"] = simple_fields_value("data")["date_time_format"];
-            $first_meeting["place"] = simple_fields_value("miejsce");
-            $first_meeting["address1"] = simple_fields_value("adres1");
-            $first_meeting["address2"] = simple_fields_value("adres2");
-            $first_meeting["speaker"] = simple_fields_value("imienazwisko");
-            $first_meeting["company"] = simple_fields_value("firma");
-            // http://simple-fields.com/documentation/field-types/file/
-            $first_meeting["avatar"] = simple_fields_value("avatar")["image_src"]["thumbnail"];
-            $first_meeting["title"] = get_the_title();
-            $first_meeting["excerpt"] = get_the_excerpt();
-            break;
+            if ( !count($first_meeting) ) {
+                $first_meeting["date"] = simple_fields_value("data")["date_time_format"];
+                $first_meeting["place"] = simple_fields_value("miejsce");
+                $first_meeting["address1"] = simple_fields_value("adres1");
+                $first_meeting["address2"] = simple_fields_value("adres2");
+                $first_meeting["speaker"] = simple_fields_value("imienazwisko");
+                $first_meeting["company"] = simple_fields_value("firma");
+                // http://simple-fields.com/documentation/field-types/file/
+                $first_meeting["avatar"] = simple_fields_value("avatar")["image_src"]["thumbnail"];
+                $first_meeting["title"] = get_the_title();
+                $first_meeting["excerpt"] = get_the_excerpt();
+            } else if ( !count($second_meeting) ) {
+                $second_meeting["date"] = simple_fields_value("data")["date_time_format"];
+                $second_meeting["place"] = simple_fields_value("miejsce");
+                $second_meeting["address1"] = simple_fields_value("adres1");
+                $second_meeting["address2"] = simple_fields_value("adres2");
+                $second_meeting["speaker"] = simple_fields_value("imienazwisko");
+                $second_meeting["company"] = simple_fields_value("firma");
+                $second_meeting["avatar"] = simple_fields_value("avatar")["image_src"]["thumbnail"];
+                $second_meeting["title"] = get_the_title();
+                $second_meeting["excerpt"] = get_the_excerpt();
+            } else {
+                break;
+            }
         }
 	}
 	/* Restore original Post Data */
@@ -98,7 +112,37 @@ if ( count($first_meeting) ):
 <?php
 endif;
 ?>
+<?php
+if ( count($second_meeting) ):
+?>
+<div class="gray-container">
+    <div class="container">
+        <h1>Archive</h1>
+        <h2>View materials from our previous meetings</h2>
 
+        <div class="clearfix">
+            <div class="speaker">
+                <div class="speaker-avatar">
+                    <img src="<?php echo $second_meeting["avatar"][0]; ?>" alt="">
+                </div>
+                <div class="speaker-details">
+                    <p>
+                        <span class="speaker-name"><?php echo $second_meeting["speaker"]; ?></span>
+                        <span class="speaker-company"><?php echo $second_meeting["company"]; ?></span>
+                    </p>
+                </div>
+            </div>
+            <div class="presentation">
+                <p class="presentation-title"><?php echo $second_meeting["title"]; ?></p>
+                <div class="presentation-excerpt"><?php echo $second_meeting["excerpt"]; ?></div>
+            </div>
+        </div>
+        <a href="#" class="button">View our archive</a>
+    </div>
+</div>
+<?php
+endif;
+?>
 <?php wp_footer(); ?>
 </body>
 </html>

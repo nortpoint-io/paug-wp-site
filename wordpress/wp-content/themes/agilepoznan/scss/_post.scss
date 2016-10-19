@@ -1,0 +1,25 @@
+.post-header {
+    background-color: rgba($gray-dark, 0.75);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .post-title {
+        font-family: 'Cardo', serif;
+        font-weight: 100;
+        margin-bottom: 0;
+
+        a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .post-author {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+}

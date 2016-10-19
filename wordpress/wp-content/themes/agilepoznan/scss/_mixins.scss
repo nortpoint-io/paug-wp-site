@@ -1,0 +1,23 @@
+@mixin make-container() {
+    margin: 0 auto;
+    padding: 15px;
+
+    @media(min-width: $screen-lg) {
+        max-width: 940px;
+    }
+
+    @media(min-width: $screen-xl) {
+        max-width: 1140px;
+    }
+}
+
+@mixin make-clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

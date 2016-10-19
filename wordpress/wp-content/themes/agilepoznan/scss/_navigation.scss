@@ -1,0 +1,52 @@
+.post-navigation {
+    background-color: $gray-dark;
+    @include make-clearfix();
+
+    h2 {
+        display: none;
+    }
+
+    .nav-links {
+        @include make-container();
+
+        a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .meta-nav {
+        font-size: 0.8rem;
+        display: block;
+    }
+
+    .post-title {
+        font-family: 'Cardo', serif;
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+
+    .nav-previous {
+        margin-bottom: 1rem;
+    }
+
+    @media(min-width: $screen-md) {
+        .nav-previous, .nav-next {
+            width: 45%;
+            margin-bottom: 1rem;
+        }
+
+        .nav-previous {
+            float: left;
+        }
+
+        .nav-next {
+            text-align: right;
+            float: right;
+        }
+    }
+}

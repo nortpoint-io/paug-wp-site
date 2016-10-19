@@ -33,6 +33,7 @@ if ( $query->have_posts() ) {
                 $first_meeting["avatar"] = simple_fields_value("avatar")["image_src"]["thumbnail"];
                 $first_meeting["title"] = get_the_title();
                 $first_meeting["excerpt"] = get_the_excerpt();
+                $first_meeting["permalink"] = get_permalink();
             } else if ( !count($second_meeting) ) {
                 $second_meeting["date"] = simple_fields_value("data")["date_time_format"];
                 $second_meeting["place"] = simple_fields_value("miejsce");
@@ -43,6 +44,7 @@ if ( $query->have_posts() ) {
                 $second_meeting["avatar"] = simple_fields_value("avatar")["image_src"]["thumbnail"];
                 $second_meeting["title"] = get_the_title();
                 $second_meeting["excerpt"] = get_the_excerpt();
+                $second_meeting["permalink"] = get_permalink();
             } else {
                 break;
             }
@@ -103,7 +105,7 @@ if ( count($first_meeting) ):
                 </div>
             </div>
             <div class="presentation">
-                <p class="presentation-title"><?php echo $first_meeting["title"]; ?></p>
+                <p class="presentation-title"><a href="<?php echo $first_meeting["permalink"]; ?>"><?php echo $first_meeting["title"]; ?></a></p>
                 <div class="presentation-excerpt"><?php echo $first_meeting["excerpt"]; ?></div>
             </div>
         </div>
@@ -134,7 +136,7 @@ if ( count($second_meeting) ):
                 </div>
             </div>
             <div class="presentation">
-                <p class="presentation-title"><?php echo $second_meeting["title"]; ?></p>
+                <p class="presentation-title"><a href="<?php echo $second_meeting["permalink"]; ?>"><?php echo $second_meeting["title"]; ?></a></p>
                 <div class="presentation-excerpt"><?php echo $second_meeting["excerpt"]; ?></div>
             </div>
         </div>

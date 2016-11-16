@@ -4,24 +4,24 @@ html {
 
 body {
     background-color: $black;
-    background-image: url('./img/ballet-768w.jpg');
+    background-image: url('./img/kadr-postit-768w.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    color: $white;
+    color: $black;
     font-family: 'Open Sans', sans-serif;
 
     @media(min-width: $screen-md) {
-        background-image: url('./img/ballet-992w.jpg');
+        background-image: url('./img/kadr-postit-992w.jpg');
     }
 
     @media(min-width: $screen-lg) {
-        background-image: url('./img/ballet-1200w.jpg');
+        background-image: url('./img/kadr-postit-1200w.jpg');
     }
 
     @media(min-width: $screen-xl) {
-        background-image: url('./img/ballet-2560w.jpg');
+        background-image: url('./img/kadr-postit-2560w.jpg');
     }
 }
 

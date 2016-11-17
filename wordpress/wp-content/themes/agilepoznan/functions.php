@@ -106,7 +106,7 @@ function twentysixteen_setup() {
 	 *
 	 * See: https://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+	/*add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
 		'video',
@@ -116,7 +116,7 @@ function twentysixteen_setup() {
 		'status',
 		'audio',
 		'chat',
-	) );
+	) );*/
 
 	/*
 	 * This theme styles the visual editor to resemble the theme style,

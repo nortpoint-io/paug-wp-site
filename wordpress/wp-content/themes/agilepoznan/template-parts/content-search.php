@@ -9,45 +9,32 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
+	<header class="post-header">
+		<div class="container">
+			<?php the_title( sprintf( '<h1 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+			<?php if ( $is_meeting ): ?>
+			<p class="post-author"><?php echo $meeting['speaker']; ?> - <?php echo $meeting['date']; ?></p>
+			<?php else: ?>
+			<p class="post-author"><?php echo get_the_author(); ?></p>
+			<?php endif; ?>
+		</div>
+	</header>
 
-	<?php twentysixteen_post_thumbnail(); ?>
-
-	<?php twentysixteen_excerpt(); ?>
-
-	<?php if ( 'post' === get_post_type() ) : ?>
-
-		<footer class="entry-footer">
-			<?php twentysixteen_entry_meta(); ?>
-			<?php
-				edit_post_link(
-					sprintf(
-						/* translators: %s: Name of current post */
-						__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-
-	<?php else : ?>
-
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				),
-				'<footer class="entry-footer"><span class="edit-link">',
-				'</span></footer><!-- .entry-footer -->'
-			);
-		?>
-
+	<?php if ( has_excerpt() ): ?>
+		<div class="post-summary">
+			<div class="container thin">
+				<?php the_excerpt(); ?>
+			</div>
+		</div>
 	<?php endif; ?>
-</article><!-- #post-## -->
+
+	<?php if ( has_post_thumbnail() ): ?>
+		<div class="post-thumbnail">
+			<div class="container">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+</article>
 

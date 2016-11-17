@@ -28,6 +28,28 @@
     }
 }
 
+.navigation {
+    &.pagination {
+        @include make-container();
+
+        text-align: center;
+
+        h2.screen-reader-text {
+            display: none;
+        }
+
+        .page-numbers {
+            color: $black;
+            padding: 0 0.5em;
+            text-decoration: none;
+
+            &.current {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 .post-navigation {
     background-color: $gray-dark;
     @include make-clearfix();

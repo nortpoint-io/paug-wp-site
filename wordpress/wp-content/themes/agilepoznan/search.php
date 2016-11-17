@@ -9,15 +9,9 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section class="main-content">
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
 			<?php
 			// Start the loop.
 			while ( have_posts() ) : the_post();
@@ -46,8 +40,7 @@ get_header(); ?>
 		endif;
 		?>
 
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
+	</section>
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

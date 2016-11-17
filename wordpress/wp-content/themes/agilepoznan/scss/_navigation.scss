@@ -1,3 +1,33 @@
+.main-navigation {
+    text-align: right;
+
+    ul {
+        list-style: none;
+
+        > li {
+            display: inline-block;
+            padding: 0 0.1rem;
+
+            @media(min-width: $screen-md) {
+                padding: 0 1rem;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
 .post-navigation {
     background-color: $gray-dark;
     @include make-clearfix();
@@ -25,7 +55,6 @@
     }
 
     .post-title {
-        font-family: 'Cardo', serif;
         font-weight: 100;
         font-size: 1.2rem;
     }

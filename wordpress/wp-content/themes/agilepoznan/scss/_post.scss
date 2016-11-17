@@ -4,7 +4,6 @@
     padding-bottom: 3rem;
 
     .post-title {
-        font-family: 'Cardo', serif;
         font-weight: 100;
         margin-bottom: 0;
 
@@ -19,6 +18,7 @@
     }
 
     .post-author {
+        color: $white;
         font-size: 0.8rem;
         margin-top: 10px;
     }
@@ -30,7 +30,6 @@
 }
 
 .post-summary {
-    font-family: 'Cardo', serif;
     font-weight: 700;
     line-height: 2rem;
 }

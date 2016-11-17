@@ -29,32 +29,6 @@ a {
     color: $blue;
 }
 
-.main-navigation {
-    text-align: right;
-
-    ul {
-        list-style: none;
-
-        > li {
-            display: inline-block;
-            padding: 0 1rem;
-
-            &:first-child {
-                padding-left: 0;
-            }
-
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-    }
-
-    a {
-        color: $white;
-        text-decoration: none;
-    }
-}
-
 .container {
     @include make-container();
 

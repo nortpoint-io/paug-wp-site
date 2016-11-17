@@ -59,7 +59,7 @@ if ( $query->have_posts() ) {
     endif;
     ?>
 
-    <a href="https://www.meetup.com/Poznan-Agile-User-Group/">Join our next meeting</a>
+    <a href="https://www.meetup.com/Poznan-Agile-User-Group/" class="button">Join our next meeting</a>
 </div>
 
 <div class="white-container">

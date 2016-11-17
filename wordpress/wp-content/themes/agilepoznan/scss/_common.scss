@@ -10,7 +10,7 @@ body {
     background-position: center;
     background-size: cover;
     color: $black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Hind', sans-serif;
 
     @media(min-width: $screen-md) {
         background-image: url('./img/kadr-postit-992w.jpg');
@@ -27,6 +27,32 @@ body {
 
 a {
     color: $blue;
+}
+
+.main-navigation {
+    text-align: right;
+
+    ul {
+        list-style: none;
+
+        > li {
+            display: inline-block;
+            padding: 0 1rem;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
 }
 
 .container {

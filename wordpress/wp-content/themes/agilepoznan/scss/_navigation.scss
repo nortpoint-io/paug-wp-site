@@ -29,17 +29,19 @@
 }
 
 .navigation {
-    &.pagination {
-        @include make-container();
+    background-color: rgba($gray-dark, 0.75);
 
+    &.pagination {
         text-align: center;
+        margin: 0 auto;
+        padding: 15px;
 
         h2.screen-reader-text {
             display: none;
         }
 
         .page-numbers {
-            color: $black;
+            color: $white;
             padding: 0 0.5em;
             text-decoration: none;
 
@@ -51,7 +53,6 @@
 }
 
 .post-navigation {
-    background-color: $gray-dark;
     @include make-clearfix();
 
     h2 {

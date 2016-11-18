@@ -26,6 +26,17 @@
 			<?php endif; ?>
 		</div>
 	</header>
+	<?php
+	if ( is_singular( 'post' ) ) {
+		// Previous/next post navigation.
+		the_post_navigation( array(
+			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentysixteen' ) . '</span> ' .
+				'<span class="post-title">%title</span>',
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentysixteen' ) . '</span> ' .
+				'<span class="post-title">%title</span>',
+		) );
+	}
+	?>
 
 	<?php if ( has_excerpt() ): ?>
 		<div class="post-summary">
@@ -63,6 +74,56 @@
 		?>
 		</div>
 	</div>
+	<?php if ( is_singular( 'post' ) ):?>
+		<?php if ( ( get_the_author_meta( 'description' ) && !$is_meeting) || ($meeting['bio'] && $is_meeting) ): ?>
+		<div class="gray-container">
+			<div class="container">
+				<div class="clearfix">
+					<div class="speaker">
+						<div class="speaker-avatar">
+							<?php if ( $is_meeting ): ?>
+								<img src="<?php echo $meeting["avatar"][0]; ?>" alt="">
+							<?php else: ?>
+								<?php
+								echo get_avatar( get_the_author_meta( 'user_email' ), 200 );
+								?>
+							<?php endif; ?>
+						</div>
+						<div class="speaker-details">
+							<p>
+								<?php if ( $is_meeting ): ?>
+									<span class="speaker-name"><?php echo $meeting["speaker"]; ?></span>
+									<span class="speaker-company"><?php echo $meeting["company"]; ?></span>
+								<?php else: ?>
+									<span class="speaker-name"><?php echo get_the_author(); ?></span>
+								<?php endif; ?>
+							</p>
+						</div>
+					</div>
+					<div class="presentation">
+						<p class="presentation-title">Bio</p>
+						<div class="presentation-excerpt">
+							<?php if ( $is_meeting ): ?>
+								<?php echo $meeting["bio"]; ?>
+							<?php else: ?>
+								<?php echo get_the_author_meta( 'description' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php endif;
+
+		// Previous/next post navigation.
+		the_post_navigation( array(
+			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentysixteen' ) . '</span> ' .
+				'<span class="post-title">%title</span>',
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentysixteen' ) . '</span> ' .
+				'<span class="post-title">%title</span>',
+		) );
+	 endif; ?>
+
 <!--
 	<footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>

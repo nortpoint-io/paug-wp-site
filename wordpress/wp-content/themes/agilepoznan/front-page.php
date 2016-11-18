@@ -44,8 +44,10 @@ if ( $query->have_posts() ) {
 }
 ?>
 
-<div class="cover-container container">
-    <h1>Poznań Agile<br>User Group</h1>
+<div class="cover-container container thin">
+    <div class="logo-container">
+        <img src="<?php bloginfo('template_directory') ?>/img/paug_logo_small.png" alt="Agile Poznań"/>
+    </div>
     <?php
     if ( count($first_meeting) ):
     ?>

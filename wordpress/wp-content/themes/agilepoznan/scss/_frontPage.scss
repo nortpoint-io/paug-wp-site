@@ -3,22 +3,27 @@
 .cover-container {
     padding-top: 5rem;
     height: 70vh;
+    text-align: right;
 
     @media(min-width: $screen-xl) {
         padding-top: 10rem;
     }
 
-    h1, a, .next-meeting-date {
+    .logo-container {
+        text-align: left;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    a, .next-meeting-date {
         font-family: 'Montserrat', sans-serif;
         font-weight: 100;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
-
     .next-meeting-data {
-        margin-top: 3rem;
+        margin-top: 2rem;
         margin-bottom: 2rem;
 
         p {

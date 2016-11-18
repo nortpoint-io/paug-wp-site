@@ -1,19 +1,17 @@
-
-
 .cover-container {
     padding-top: 5rem;
     height: 70vh;
-    text-align: right;
 
     @media(min-width: $screen-xl) {
         padding-top: 10rem;
     }
 
-    .logo-container {
-        text-align: left;
+    img {
+        max-width: 100%;
 
-        img {
-            max-width: 100%;
+        @media(min-width: $screen-md) {
+            margin-top: 8rem;
+            margin-bottom: 2rem;
         }
     }
 

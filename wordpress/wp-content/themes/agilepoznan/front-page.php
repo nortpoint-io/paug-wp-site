@@ -45,9 +45,7 @@ if ( $query->have_posts() ) {
 ?>
 
 <div class="cover-container container thin">
-    <div class="logo-container">
-        <img src="<?php bloginfo('template_directory') ?>/img/paug_logo_small.png" alt="Agile Poznań"/>
-    </div>
+    <img src="<?php bloginfo('template_directory') ?>/img/paug_logo_text.png" alt="Agile Poznań"/>
     <?php
     if ( count($first_meeting) ):
     ?>
@@ -68,6 +66,7 @@ if ( $query->have_posts() ) {
     <div class="container">
         <h1>About PAUG</h1>
         <h2>What is it all about</h2>
+        <img src="<?php bloginfo('template_directory') ?>/img/paug_logo_small.png" alt="Agile Poznań"/>
         <p>Poznań Agile User Group is dedicated to Lean & Agile Software Project and Development Management for a local Lean & Agile community in a city of Poznań, Poland.</p>
         <p>Feel free to join our next meeting or get in touch with us through LinkedIn group.</p>
 

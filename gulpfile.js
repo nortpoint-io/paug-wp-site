@@ -50,9 +50,8 @@ gulp.task('dev', ['styles'], () => {
 gulp.task('zip', () => {
 	return gulp.src([
 		`${SRC_DIR}/**/*`,
-		`!${SRC_DIR}/scss`,
-		`!${SRC_DIR}/version-info.txt`
-	])
+		`!${SRC_DIR}/scss/*`
+	], {base: './wordpress/wp-content/themes'})
 	.pipe(zip(THEME_FILE))
 	.pipe(gulp.dest('.'));
 });

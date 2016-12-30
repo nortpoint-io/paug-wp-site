@@ -23,7 +23,7 @@ const HEADER = [
 	'License URI: http://www.gnu.org/licenses/gpl-2.0.html',
 	'*/',
 	''
-].join('\r\n');
+].join('\n');
 
 gulp.task('clean', () => {
     return del(THEME_FILE);

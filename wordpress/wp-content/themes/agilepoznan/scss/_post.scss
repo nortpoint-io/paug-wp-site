@@ -1,0 +1,44 @@
+.post-header {
+    background-color: rgba($gray-dark, 0.75);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .post-title {
+        font-weight: 100;
+        margin-bottom: 0;
+        color: $white;
+
+        a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .post-author {
+        color: $white;
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+}
+
+.post-content, .post-summary, .post-thumbnail {
+    background-color: $white;
+    color: $black;
+}
+
+.post-summary {
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.post-thumbnail {
+    text-align: center;
+}
+
+.post-content {
+    line-height: 1.5rem;
+}

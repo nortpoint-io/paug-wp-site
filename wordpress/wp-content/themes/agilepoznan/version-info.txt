@@ -1,0 +1,9 @@
+/*
+Theme Name: Agile Poznań
+Author: nortpoint.io
+Author URI: http://nortpoint.io/
+Version: 0.1.0
+Text Domain: agilepoznan
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/

@@ -2,15 +2,28 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const del = require('del');
 const csso = require('gulp-csso');
-const fs = require('fs');
 const header = require('gulp-header');
 const sequence = require('run-sequence');
 const zip = require('gulp-zip');
 const browserSync = require('browser-sync').create();
+const pkg = require('./package.json');
 
 const THEME_NAME = 'agilepoznan';
 const SRC_DIR = `wordpress/wp-content/themes/${THEME_NAME}`;
 const THEME_FILE = `${THEME_NAME}.zip`;
+
+const HEADER = [
+	'/*',
+	'Theme Name: Agile Poznań',
+	'Author: nortpoint.io',
+	'Author URI: http://nortpoint.io/',
+	'Version: ${version}',
+	'Text Domain: agilepoznan',
+	'License: GNU General Public License v2 or later',
+	'License URI: http://www.gnu.org/licenses/gpl-2.0.html',
+	'*/',
+	''
+].join('\r\n');
 
 gulp.task('clean', () => {
     return del(THEME_FILE);
@@ -20,7 +33,7 @@ gulp.task('styles', () => {
     return gulp.src(`${SRC_DIR}/scss/*.scss`)
         .pipe(sass())
         .pipe(csso())
-		.pipe(header(fs.readFileSync(`${SRC_DIR}/version-info.txt`, 'utf8')))
+		.pipe(header(HEADER, {version: pkg.version}))
         .pipe(gulp.dest(SRC_DIR))
 		.pipe(browserSync.stream());
 });

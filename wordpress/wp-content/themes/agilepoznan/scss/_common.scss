@@ -29,6 +29,24 @@ a {
     color: $blue;
 }
 
+footer {
+    background-color: rgba($gray-dark, 0.75);
+    padding: .5rem;
+    color: $white;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .6rem;
+
+    a {
+        padding-left: .5rem;
+    }
+
+    img {
+        height: .75rem;
+        vertical-align: text-bottom;
+    }
+}
+
 .container {
     @include make-container();
 

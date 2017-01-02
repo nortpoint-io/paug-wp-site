@@ -15,9 +15,13 @@
         }
     }
 
-    a, .next-meeting-date {
+    .next-meeting-date {
         font-family: 'Montserrat', sans-serif;
         font-weight: 100;
+
+        .date {
+            font-weight: bold;
+        }
     }
 
     .next-meeting-data {
@@ -30,8 +34,17 @@
         }
     }
 
+    .next-meeting-place {
+        line-height: 1.5rem;
+    }
+
     .next-meeting-date, a {
         font-size: 1.75rem;
+    }
+
+    .button {
+        font-size: 1.25rem;
+        font-weight: 400;
     }
 }
 
@@ -41,6 +54,7 @@
     color: $black;
 
     h1 {
+        font-family: 'Montserrat', sans-serif;
         color: $blue;
         font-weight: bold;
         margin-top: 3rem;
@@ -49,8 +63,8 @@
 
     h2 {
         color: $gray;
-        font-size: 1rem;
-        font-weight: 100;
+        font-size: 0.9rem;
+        font-weight: 400;
         margin-top: 0;
         margin-bottom: 4rem;
     }
@@ -59,9 +73,17 @@
         margin: 0 auto;
         margin-top: 2rem;
         text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.45rem;
 
         @media(min-width: $screen-lg) {
             width: 70%;
+        }
+
+        &.about-description {
+            @media(min-width: $screen-md) {
+                margin-top: 7rem;
+            }
         }
     }
 
@@ -88,13 +110,30 @@
     color: $white;
     text-decoration: none;
     text-align: center;
-    padding: 15px;
+    padding: 1.2rem;
     display: inline-block;
     border-radius: 4px;
     font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
 
     &:hover {
         background-color: lighten($blue, 5%);
+    }
+
+    &.button-light {
+        background-color: $blue-light;
+
+        &:hover {
+            background-color: lighten($blue-light, 5%);
+        }
+    }
+}
+
+.about-logo {
+    @media(min-width: $screen-md) {
+        float: left;
+        margin-right: 4rem;
+        margin-left: 4rem;
     }
 }
 
@@ -117,7 +156,9 @@
 
     .speaker-name {
         color: $blue;
-        font-size: 1.3rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
     }
 
     .speaker-company {
@@ -152,12 +193,40 @@
     text-align: left;
 
     .presentation-title {
-        margin-bottom: 1rem;
         font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
 
         a {
             color: $black;
             text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .presentation-date {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: $gray;
+        font-size: 0.9rem;
+    }
+
+    .presentation-excerpt {
+        font-size: 0.9rem;
+        line-height: 1.45rem;
+    }
+
+    .presentation-read-more {
+        text-align: right;
+        width: inherit;
+        padding-right: 2rem;
+
+        a {
+            color: $black;
+            text-decoration: none;
+            font-weight: 600;
 
             &:hover {
                 text-decoration: underline;

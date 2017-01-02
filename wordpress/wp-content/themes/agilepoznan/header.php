@@ -11,13 +11,18 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php if ( has_nav_menu( 'primary' ) ) : ?>
-	<nav id="site-navigation" class="main-navigation container" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'twentysixteen' ); ?>">
-		<?php
-			wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'menu_class'     => 'primary-menu',
-				) );
-		?>
-	</nav><!-- .main-navigation -->
-<?php endif; ?>
+	<div class="container">
+		<a href="<?php echo esc_url( home_url() ) ?>" class="navigation-logo">
+			<img src="<?php bloginfo('template_directory') ?>/img/logo_text_bw.png" alt="Agile Poznań">
+		</a>
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+			<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'twentysixteen' ); ?>">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'menu_class'     => 'primary-menu',
+						) );
+				?>
+			</nav><!-- .main-navigation -->
+		<?php endif; ?>
+</div>

@@ -79,6 +79,12 @@
         @media(min-width: $screen-lg) {
             width: 70%;
         }
+
+        &.about-description {
+            @media(min-width: $screen-md) {
+                margin-top: 7rem;
+            }
+        }
     }
 
     .button {
@@ -120,6 +126,14 @@
         &:hover {
             background-color: lighten($blue-light, 5%);
         }
+    }
+}
+
+.about-logo {
+    @media(min-width: $screen-md) {
+        float: left;
+        margin-right: 4rem;
+        margin-left: 4rem;
     }
 }
 

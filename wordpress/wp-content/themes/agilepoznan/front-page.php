@@ -12,7 +12,8 @@ if ( $query->have_posts() ) {
 
         if ( count(simple_fields_value("data")) > 0 ) {
             if ( !count($first_meeting) ) {
-                $first_meeting["date"] = simple_fields_value("data")["date_time_format"];
+                $first_meeting["date"] = simple_fields_value("data")["date_format"];
+                $first_meeting["time"] = date("H:i", simple_fields_value("data")["date_unixtime"]);
                 $first_meeting["place"] = simple_fields_value("miejsce");
                 $first_meeting["address1"] = simple_fields_value("adres1");
                 $first_meeting["address2"] = simple_fields_value("adres2");
@@ -24,7 +25,8 @@ if ( $query->have_posts() ) {
                 $first_meeting["excerpt"] = get_the_excerpt();
                 $first_meeting["permalink"] = get_permalink();
             } else if ( !count($second_meeting) ) {
-                $second_meeting["date"] = simple_fields_value("data")["date_time_format"];
+                $second_meeting["date"] = simple_fields_value("data")["date_format"];
+                $second_meeting["time"] = date("H:i", simple_fields_value("data")["date_unixtime"]);
                 $second_meeting["place"] = simple_fields_value("miejsce");
                 $second_meeting["address1"] = simple_fields_value("adres1");
                 $second_meeting["address2"] = simple_fields_value("adres2");
@@ -50,7 +52,9 @@ if ( $query->have_posts() ) {
     if ( count($first_meeting) ):
     ?>
         <div class="next-meeting-data">
-            <p class="next-meeting-date"><?php echo $first_meeting["date"] ?></p>
+            <p class="next-meeting-date">
+                <span class="date"><?php echo $first_meeting["date"] ?></span> <?php echo $first_meeting["time"] ?>
+            </p>
             <p><?php echo $first_meeting["place"] ?></p>
             <p><?php echo $first_meeting["address1"] ?></p>
             <p><?php echo $first_meeting["address2"] ?></p>

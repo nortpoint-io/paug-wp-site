@@ -15,7 +15,7 @@
         }
     }
 
-    a, .next-meeting-date {
+    .next-meeting-date {
         font-family: 'Montserrat', sans-serif;
         font-weight: 100;
 
@@ -104,10 +104,11 @@
     color: $white;
     text-decoration: none;
     text-align: center;
-    padding: 15px;
+    padding: 1.2rem;
     display: inline-block;
     border-radius: 4px;
     font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
 
     &:hover {
         background-color: lighten($blue, 5%);

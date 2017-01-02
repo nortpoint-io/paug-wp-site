@@ -100,6 +100,7 @@ if ( count($first_meeting) ):
             </div>
             <div class="presentation">
                 <p class="presentation-title"><a href="<?php echo $first_meeting["permalink"]; ?>"><?php echo $first_meeting["title"]; ?></a></p>
+                <p class="presentation-date"><?php echo $first_meeting["date"]; ?> <?php echo $first_meeting["time"]; ?></p>
                 <div class="presentation-excerpt"><?php echo $first_meeting["excerpt"]; ?></div>
                 <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Read more</a></p>
             </div>
@@ -132,6 +133,7 @@ if ( count($second_meeting) ):
             </div>
             <div class="presentation">
                 <p class="presentation-title"><a href="<?php echo $second_meeting["permalink"]; ?>"><?php echo $second_meeting["title"]; ?></a></p>
+                <p class="presentation-date"><?php echo $second_meeting["date"]; ?> <?php echo $second_meeting["time"]; ?></p>
                 <div class="presentation-excerpt"><?php echo $second_meeting["excerpt"]; ?></div>
                 <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Read more</a></p>
             </div>

@@ -177,7 +177,6 @@
     text-align: left;
 
     .presentation-title {
-        margin-bottom: 1rem;
         font-weight: bold;
 
         a {
@@ -188,6 +187,13 @@
                 text-decoration: underline;
             }
         }
+    }
+
+    .presentation-date {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: $gray;
+        font-size: 0.9rem;
     }
 
     .presentation-excerpt {

@@ -73,6 +73,8 @@
         margin: 0 auto;
         margin-top: 2rem;
         text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.45rem;
 
         @media(min-width: $screen-lg) {
             width: 70%;
@@ -185,6 +187,11 @@
                 text-decoration: underline;
             }
         }
+    }
+
+    .presentation-excerpt {
+        font-size: 0.9rem;
+        line-height: 1.45rem;
     }
 
     @media(min-width: $screen-sm) {

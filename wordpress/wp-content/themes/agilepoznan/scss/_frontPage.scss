@@ -195,6 +195,22 @@
         line-height: 1.45rem;
     }
 
+    .presentation-read-more {
+        text-align: right;
+        width: inherit;
+        padding-right: 2rem;
+
+        a {
+            color: $black;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
     @media(min-width: $screen-sm) {
         clear: both;
         padding-top: 1rem;

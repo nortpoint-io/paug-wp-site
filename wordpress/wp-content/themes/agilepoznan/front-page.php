@@ -101,6 +101,7 @@ if ( count($first_meeting) ):
             <div class="presentation">
                 <p class="presentation-title"><a href="<?php echo $first_meeting["permalink"]; ?>"><?php echo $first_meeting["title"]; ?></a></p>
                 <div class="presentation-excerpt"><?php echo $first_meeting["excerpt"]; ?></div>
+                <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Read more</a></p>
             </div>
         </div>
         <a href="https://www.meetup.com/Poznan-Agile-User-Group/" class="button">Join our next meeting</a>
@@ -132,6 +133,7 @@ if ( count($second_meeting) ):
             <div class="presentation">
                 <p class="presentation-title"><a href="<?php echo $second_meeting["permalink"]; ?>"><?php echo $second_meeting["title"]; ?></a></p>
                 <div class="presentation-excerpt"><?php echo $second_meeting["excerpt"]; ?></div>
+                <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Read more</a></p>
             </div>
         </div>
         <a href="<?php echo esc_url( get_category_link( get_cat_ID( $meetings_category ) ) ); ?>" class="button">View our archive</a>

@@ -67,14 +67,15 @@ if ( $query->have_posts() ) {
 </div>
 
 <div class="white-container">
-    <div class="container">
+    <div class="container clearfix">
         <h1>About PAUG</h1>
         <h2>What is it all about</h2>
         <img src="<?php bloginfo('template_directory') ?>/img/paug_logo_small.png" class="about-logo" alt="Agile Poznań"/>
 
         <p class="about-description">Poznań Agile User Group is dedicated to Lean & Agile Software Project and Development Management for a local Lean & Agile community in a city of Poznań, Poland.</p>
         <p>Feel free to join our next meeting or get in touch with us through LinkedIn group.</p>
-
+    </div>
+    <div class="container">
         <a href="https://www.linkedin.com/groups/4406793" class="button">Join LinkedIn Group</a>
     </div>
 </div>

@@ -55,9 +55,9 @@ if ( $query->have_posts() ) {
             <p class="next-meeting-date">
                 <span class="date"><?php echo $first_meeting["date"] ?></span> <?php echo $first_meeting["time"] ?>
             </p>
-            <p><?php echo $first_meeting["place"] ?></p>
-            <p><?php echo $first_meeting["address1"] ?></p>
-            <p><?php echo $first_meeting["address2"] ?></p>
+            <p class="next-meeting-place"><?php echo $first_meeting["place"] ?></p>
+            <p class="next-meeting-place"><?php echo $first_meeting["address1"] ?></p>
+            <p class="next-meeting-place"><?php echo $first_meeting["address2"] ?></p>
         </div>
     <?php
     endif;

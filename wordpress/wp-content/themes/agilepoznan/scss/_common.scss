@@ -32,18 +32,19 @@ a {
 footer {
     background-color: rgba($gray-dark, 0.75);
     padding: .5rem;
-    color: $white;
     text-align: right;
     font-family: 'Montserrat', sans-serif;
-    font-size: .6rem;
 
     a {
+        color: $white;
         padding-left: .5rem;
+        text-decoration: none;
+        font-size: .6rem;
     }
 
     img {
         height: .75rem;
-        vertical-align: text-bottom;
+        vertical-align: bottom;
     }
 }
 

@@ -36,7 +36,7 @@ gulp.task('styles', () => {
         .pipe(sass())
         .pipe(csso())
 		.pipe(header(HEADER, {version: pkg.version}))
-		.pipe(sourcemaps.write(`${SRC_DIR}`))
+		.pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(SRC_DIR))
 		.pipe(browserSync.stream());
 });

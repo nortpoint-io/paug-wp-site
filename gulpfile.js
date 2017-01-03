@@ -38,14 +38,14 @@ gulp.task('styles', () => {
 		.pipe(header(HEADER, {version: pkg.version}))
 		.pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(SRC_DIR))
-		.pipe(browserSync.stream());
+		.pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('dev', ['styles'], () => {
 	browserSync.init({
         proxy: 'localhost:8888'
     });
-	
+		
 	gulp.watch(`${SRC_DIR}/scss/*.scss`, ['styles']);
 	gulp.watch(`${SRC_DIR}/**/*.php`, browserSync.reload);
 });

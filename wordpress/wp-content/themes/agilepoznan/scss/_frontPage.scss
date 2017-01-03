@@ -1,6 +1,6 @@
 .cover-container {
     padding-top: 5rem;
-    height: 70vh;
+    min-height: 70vh;
 
     @media(min-width: $screen-xl) {
         padding-top: 10rem;

@@ -1,6 +1,6 @@
 {
   "name": "paug-wp-site",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "template for paug site",
   "scripts": {
     "start": "gulp",

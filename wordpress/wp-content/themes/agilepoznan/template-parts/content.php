@@ -22,7 +22,7 @@
 			<?php if ( $is_meeting ): ?>
 			<p class="post-author"><?php echo $meeting['speaker']; ?> - <?php echo $meeting['date']; ?></p>
 			<?php else: ?>
-			<p class="post-author"><?php echo get_the_author(); ?></p>
+			<p class="post-author"><?php echo get_the_author(); ?> - <?php echo get_the_date(); ?></p>
 			<?php endif; ?>
 		</div>
 	</header>

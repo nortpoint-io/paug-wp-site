@@ -42,14 +42,3 @@
 .post-content {
     line-height: 1.5rem;
 }
-
-.presentation {
-    &.presentation-bio {
-        .presentation-title, .presentation-excerpt {
-            @media(min-width: $screen-md) {
-                width: inherit;
-                margin-left: 40%;
-            }
-        }
-    }
-}

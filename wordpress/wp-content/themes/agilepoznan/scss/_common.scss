@@ -107,6 +107,12 @@ footer {
 
 .gray-container {
     background-color: $gray-light;
+
+    .speaker {
+        img {
+            border-color: darken($gray-light, 5%);
+        }
+    }
 }
 
 article {
@@ -119,6 +125,12 @@ article {
     &:nth-child(even) {
         .list-item-container {
             background-color: $gray-light;
+
+            .speaker {
+                img {
+                    border-color: darken($gray-light, 5%);
+                }
+            }
         }
     }
 }
@@ -164,7 +176,6 @@ article {
 
     @media(min-width: $screen-md) {
         float: left;
-        margin-right: 2rem;
         width: 33%;
 
         .speaker-avatar, .speaker-details {
@@ -177,6 +188,13 @@ article {
 
 .presentation {
     text-align: left;
+
+    .presentation-title, .presentation-excerpt, .presentation-date {
+        @media(min-width: $screen-md) {
+            width: inherit;
+            margin-left: 33%;
+        }
+    }
 
     .presentation-title {
         font-weight: bold;

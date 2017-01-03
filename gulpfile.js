@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const del = require('del');
 const csso = require('gulp-csso');
+const sourcemaps = require('gulp-sourcemaps');
 const header = require('gulp-header');
 const sequence = require('run-sequence');
 const zip = require('gulp-zip');
@@ -31,9 +32,11 @@ gulp.task('clean', () => {
 
 gulp.task('styles', () => {
     return gulp.src(`${SRC_DIR}/scss/*.scss`)
+		.pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(csso())
 		.pipe(header(HEADER, {version: pkg.version}))
+		.pipe(sourcemaps.write(`${SRC_DIR}`))
         .pipe(gulp.dest(SRC_DIR))
 		.pipe(browserSync.stream());
 });

@@ -100,7 +100,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="presentation presentation-bio">
+					<div class="presentation">
 						<p class="presentation-title">Bio</p>
 						<div class="presentation-excerpt">
 							<?php if ( $is_meeting ): ?>

@@ -85,7 +85,7 @@
 								<img src="<?php echo $meeting["avatar"][0]; ?>" alt="">
 							<?php else: ?>
 								<?php
-								echo get_avatar( get_the_author_meta( 'user_email' ), 200 );
+								echo get_avatar( get_the_author_meta( 'user_email' ), 150 );
 								?>
 							<?php endif; ?>
 						</div>

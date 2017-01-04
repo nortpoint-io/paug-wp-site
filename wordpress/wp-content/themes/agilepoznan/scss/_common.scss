@@ -257,3 +257,11 @@ article {
     max-width: 100%;
     height: auto;
 }
+
+.hidden-xs {
+    display: none;
+
+    @media(min-width: $screen-sm) {
+        display: inline;
+    }
+}

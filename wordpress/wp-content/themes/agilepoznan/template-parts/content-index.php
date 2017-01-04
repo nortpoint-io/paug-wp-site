@@ -23,7 +23,7 @@
                     <?php if ( $is_meeting ): ?>
                         <img src="<?php echo $meeting["avatar"][0]; ?>" alt="<?php echo $meeting["speaker"]; ?>">
                     <?php else:
-                        echo get_avatar( get_the_author_meta( 'user_email' ), 200 );
+                        echo get_avatar( get_the_author_meta( 'user_email' ), 150 );
                     endif; ?>
                 </div>
                 <div class="speaker-details">

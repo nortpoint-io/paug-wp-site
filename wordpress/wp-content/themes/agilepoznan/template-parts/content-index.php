@@ -47,7 +47,7 @@
                     <p class="presentation-date"><?php echo get_the_date(); ?></p>
                 <?php endif; ?>
                 <div class="presentation-excerpt"><?php echo get_the_excerpt(); ?></div>
-                <p class="presentation-read-more"><a href="<?php echo get_permalink(); ?>">Read more</a></p>
+                <p class="presentation-read-more"><a href="<?php echo get_permalink(); ?>">Czytaj dalej</a></p>
             </div>
         </div>
         </div>

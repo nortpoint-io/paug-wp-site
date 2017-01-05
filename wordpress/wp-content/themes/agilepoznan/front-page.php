@@ -59,11 +59,11 @@ if ( $query->have_posts() ) {
             <p class="next-meeting-place"><?php echo $first_meeting["address1"] ?></p>
             <p class="next-meeting-place"><?php echo $first_meeting["address2"] ?></p>
         </div>
+
+        <a href="<?php echo $first_meeting["permalink"]; ?>" class="button button-light">Dowiedz się więcej</a>
     <?php
     endif;
     ?>
-
-    <a href="https://www.meetup.com/Poznan-Agile-User-Group/" class="button button-light">Join our next meeting</a>
 </div>
 
 <div class="white-container">
@@ -107,7 +107,7 @@ if ( count($first_meeting) ):
                 <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Read more</a></p>
             </div>
         </div>
-        <a href="https://www.meetup.com/Poznan-Agile-User-Group/" class="button">Join our next meeting</a>
+        <a href="<?php echo $first_meeting["permalink"]; ?>" class="button">Dowiedz się więcej</a>
     </div>
 </div>
 <?php

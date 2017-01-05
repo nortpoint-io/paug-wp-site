@@ -28,9 +28,9 @@ get_header(); ?>
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
+				'prev_text'          => 'Poprzednia strona' /*__( 'Previous page', 'twentysixteen' )*/,
+				'next_text'          =>  'Następna strona' /*__( 'Next page', 'twentysixteen' )*/,
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . 'Strona' /*__( 'Page', 'twentysixteen' )*/ . ' </span>',
 			) );
 
 		// If no content, include the "No posts found" template.

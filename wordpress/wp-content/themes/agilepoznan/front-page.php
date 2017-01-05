@@ -59,24 +59,24 @@ if ( $query->have_posts() ) {
             <p class="next-meeting-place"><?php echo $first_meeting["address1"] ?></p>
             <p class="next-meeting-place"><?php echo $first_meeting["address2"] ?></p>
         </div>
+
+        <a href="<?php echo $first_meeting["permalink"]; ?>" class="button button-light">Dowiedz się więcej</a>
     <?php
     endif;
     ?>
-
-    <a href="https://www.meetup.com/Poznan-Agile-User-Group/" class="button button-light">Join our next meeting</a>
 </div>
 
 <div class="white-container">
     <div class="container clearfix">
-        <h1>About PAUG</h1>
-        <h2>What is it all about</h2>
+        <h1>O Agile Poznań</h1>
+        <h2>O co w tym wszystkim chodzi</h2>
         <img src="<?php bloginfo('template_directory') ?>/img/paug_logo_small.png" class="about-logo" alt="Agile Poznań"/>
 
-        <p class="about-description">Poznań Agile User Group is dedicated to Lean & Agile Software Project and Development Management for a local Lean & Agile community in a city of Poznań, Poland.</p>
-        <p>Feel free to join our next meeting or get in touch with us through LinkedIn group.</p>
+        <p class="about-description">Agile Poznań to grupa poświęcona zwinnemu zarządzaniu projektami tworzona przez lokalną społeczność w Poznaniu.</p>
+        <p>Zapraszamy na nasze następne spotkanie lub kontakt poprzez grupę na LinkedIn.</p>
     </div>
     <div class="container">
-        <a href="https://www.linkedin.com/groups/4406793" class="button">Join LinkedIn Group</a>
+        <a href="https://www.linkedin.com/groups/4406793" class="button">Dołącz do grupy na LinkedIn</a>
     </div>
 </div>
 <?php
@@ -85,8 +85,8 @@ if ( count($first_meeting) ):
 <div class="border"></div>
 <div class="white-container">
     <div class="container">
-        <h1>Next meetup</h1>
-        <h2>Check next meetup line-up and topic</h2>
+        <h1>Następne spotkanie</h1>
+        <h2>Sprawdź temat następnego spotkania</h2>
 
         <div class="clearfix">
             <div class="speaker">
@@ -104,10 +104,10 @@ if ( count($first_meeting) ):
                 <p class="presentation-title"><a href="<?php echo $first_meeting["permalink"]; ?>"><?php echo $first_meeting["title"]; ?></a></p>
                 <p class="presentation-date"><?php echo $first_meeting["date"]; ?> <?php echo $first_meeting["time"]; ?></p>
                 <div class="presentation-excerpt"><?php echo $first_meeting["excerpt"]; ?></div>
-                <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Read more</a></p>
+                <!--<p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Więcej</a></p>-->
             </div>
         </div>
-        <a href="https://www.meetup.com/Poznan-Agile-User-Group/" class="button">Join our next meeting</a>
+        <a href="<?php echo $first_meeting["permalink"]; ?>" class="button">Dowiedz się więcej</a>
     </div>
 </div>
 <?php
@@ -118,8 +118,8 @@ if ( count($second_meeting) ):
 ?>
 <div class="gray-container">
     <div class="container">
-        <h1>Archive</h1>
-        <h2>View materials from our previous meetings</h2>
+        <h1>Archiwum</h1>
+        <h2>Zobacz materiały z naszych poprzednich spotkań</h2>
 
         <div class="clearfix">
             <div class="speaker">
@@ -137,10 +137,10 @@ if ( count($second_meeting) ):
                 <p class="presentation-title"><a href="<?php echo $second_meeting["permalink"]; ?>"><?php echo $second_meeting["title"]; ?></a></p>
                 <p class="presentation-date"><?php echo $second_meeting["date"]; ?> <?php echo $second_meeting["time"]; ?></p>
                 <div class="presentation-excerpt"><?php echo $second_meeting["excerpt"]; ?></div>
-                <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Read more</a></p>
+                <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Czytaj dalej</a></p>
             </div>
         </div>
-        <a href="<?php echo esc_url( get_category_link( get_cat_ID( $meetings_category ) ) ); ?>" class="button">View our archive</a>
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( $meetings_category ) ) ); ?>" class="button">Zobacz nasze archiwum</a>
     </div>
 </div>
 <?php

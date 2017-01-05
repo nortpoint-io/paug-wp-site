@@ -30,9 +30,9 @@
 	if ( is_singular( 'post' ) ) {
 		// Previous/next post navigation.
 		the_post_navigation( array(
-			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentysixteen' ) . '</span> ' .
+			'next_text' => '<span class="meta-nav" aria-hidden="true">Następny</span> ' .
 				'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentysixteen' ) . '</span> ' .
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">Poprzedni</span> ' .
 				'<span class="post-title">%title</span>',
 		) );
 	}
@@ -117,9 +117,9 @@
 
 		// Previous/next post navigation.
 		the_post_navigation( array(
-			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentysixteen' ) . '</span> ' .
+			'next_text' => '<span class="meta-nav" aria-hidden="true">Następny</span> ' .
 				'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentysixteen' ) . '</span> ' .
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">Poprzedni</span> ' .
 				'<span class="post-title">%title</span>',
 		) );
 	 endif; ?>

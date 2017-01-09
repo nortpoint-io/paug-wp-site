@@ -196,5 +196,11 @@
 
 		belowEntryMetaClass( 'img.size-full' );
 		belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
+
+		$('#mainNav').affix({
+			offset: {
+				top: 100
+			}
+		});
 	} );
 } )( jQuery );

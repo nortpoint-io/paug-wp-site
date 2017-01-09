@@ -25,6 +25,14 @@ body {
     }
 }
 
+.main-content {
+    margin-top: 8rem;
+
+    @media(min-width: $screen-md) {
+        margin-top: 5rem;
+    }
+}
+
 a {
     color: $blue;
 }

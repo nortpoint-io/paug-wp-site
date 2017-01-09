@@ -1,6 +1,12 @@
 .cover-container {
-    padding-top: 5rem;
     min-height: 70vh;
+
+    @media(max-width: $screen-md) {
+        &.container {
+            margin-top: 3rem;
+            padding-top: 5rem;
+        }
+    }
 
     @media(min-width: $screen-xl) {
         padding-top: 10rem;

@@ -9,10 +9,10 @@
 ?>
 <?php
 	$meeting["date"] = simple_fields_value("data")["date_time_format"];
-	$meeting["speaker"] = simple_fields_value("imienazwisko");
-	$meeting["company"] = simple_fields_value("firma");
-	$meeting["avatar"] = simple_fields_value("avatar")["image_src"]["thumbnail"];
-	$meeting["bio"] = simple_fields_value("bio");
+	$meeting["speaker"] = simple_fields_values("imienazwisko");
+	$meeting["company"] = simple_fields_values("firma");
+	$meeting["avatar"] = simple_fields_values("avatar");
+	$meeting["bio"] = simple_fields_values("bio");
 	$is_meeting = !empty($meeting["date"]) && in_category("spotkania");
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -20,7 +20,16 @@
 		<div class="container">
 			<?php the_title( sprintf( '<h1 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 			<?php if ( $is_meeting ): ?>
-			<p class="post-author"><?php echo $meeting['speaker']; ?> - <?php echo $meeting['date']; ?></p>
+			<p class="post-author">
+				<?php
+					$first = true;
+					foreach ($meeting['speaker'] as $speaker) {
+						if (!$first) echo ", ";
+						$first = false;
+						echo $speaker;
+					}
+				?>
+				- <?php echo $meeting['date']; ?></p>
 			<?php else: ?>
 			<p class="post-author"><?php echo get_the_author(); ?> - <?php echo get_the_date(); ?></p>
 			<?php endif; ?>
@@ -75,45 +84,67 @@
 		</div>
 	</div>
 	<?php if ( is_singular( 'post' ) ):?>
-		<?php if ( ( get_the_author_meta( 'description' ) && !$is_meeting) || ($meeting['bio'] && $is_meeting) ): ?>
-		<div class="gray-container">
-			<div class="container">
-				<div class="clearfix">
-					<div class="speaker">
-						<div class="speaker-avatar">
-							<?php if ( $is_meeting ): ?>
-								<img src="<?php echo $meeting["avatar"][0]; ?>" alt="">
-							<?php else: ?>
+		<?php if ( ( get_the_author_meta( 'description' ) && !$is_meeting)) { ?>
+			<div class="gray-container">
+				<div class="container">
+					<div class="clearfix">
+						<div class="speaker">
+							<div class="speaker-avatar">
 								<?php
 								echo get_avatar( get_the_author_meta( 'user_email' ), 150 );
 								?>
-							<?php endif; ?>
-						</div>
-						<div class="speaker-details">
-							<p>
-								<?php if ( $is_meeting ): ?>
-									<span class="speaker-name"><?php echo $meeting["speaker"]; ?></span>
-									<span class="speaker-company"><?php echo $meeting["company"]; ?></span>
-								<?php else: ?>
+							</div>
+							<div class="speaker-details">
+								<p>
 									<span class="speaker-name"><?php echo get_the_author(); ?></span>
-								<?php endif; ?>
-							</p>
+								</p>
+							</div>
 						</div>
-					</div>
-					<div class="presentation">
-						<p class="presentation-title">Bio</p>
-						<div class="presentation-excerpt">
-							<?php if ( $is_meeting ): ?>
-								<?php echo $meeting["bio"]; ?>
-							<?php else: ?>
+						<div class="presentation">
+							<p class="presentation-title">Bio</p>
+							<div class="presentation-excerpt">
 								<?php echo get_the_author_meta( 'description' ); ?>
-							<?php endif; ?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<?php endif;
+		<?php
+		} else {
+			for($i = 0; $i < count($meeting["speaker"]); $i++) {
+				$bio = $meeting["bio"][$i];
+				$speaker = $meeting["speaker"][$i];
+				$company = $meeting["company"][$i];
+				$avatar = $meeting["avatar"][$i];
+
+				if ($bio) { ?>
+					<div class="gray-container">
+						<div class="container">
+							<div class="clearfix">
+								<div class="speaker">
+									<div class="speaker-avatar">
+										<img src="<?php echo $avatar["image_src"]["thumbnail"][0]; ?>" alt="">
+									</div>
+									<div class="speaker-details">
+										<p>
+											<span class="speaker-name"><?php echo $speaker; ?></span>
+											<span class="speaker-company"><?php echo $company; ?></span>
+										</p>
+									</div>
+								</div>
+								<div class="presentation">
+									<p class="presentation-title">Bio</p>
+									<div class="presentation-excerpt">
+										<?php echo $bio; ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php
+				}
+			}
+		}
 
 		// Previous/next post navigation.
 		the_post_navigation( array(

@@ -245,7 +245,7 @@
             "slug": "prelegent",
             "name": "Prelegent",
             "description": "",
-            "repeatable": false,
+            "repeatable": true,
             "fields": {
                 "1": {
                     "name": "Imi\u0119 i nazwisko",
@@ -299,7 +299,7 @@
                         "name": "Prelegent",
                         "slug": "prelegent",
                         "description": "",
-                        "repeatable": false,
+                        "repeatable": true,
                         "fields_count": 4
                     }
                 },
@@ -355,7 +355,7 @@
                         "name": "Prelegent",
                         "slug": "prelegent",
                         "description": "",
-                        "repeatable": false,
+                        "repeatable": true,
                         "fields_count": 4
                     }
                 },
@@ -417,7 +417,7 @@
                         "name": "Prelegent",
                         "slug": "prelegent",
                         "description": "",
-                        "repeatable": false,
+                        "repeatable": true,
                         "fields_count": 4
                     }
                 },
@@ -473,7 +473,7 @@
                         "name": "Prelegent",
                         "slug": "prelegent",
                         "description": "",
-                        "repeatable": false,
+                        "repeatable": true,
                         "fields_count": 4
                     }
                 }
@@ -504,7 +504,7 @@
                     "name": "Prelegent",
                     "deleted": "0",
                     "context": "normal",
-                    "priority": "high"
+                    "priority": "low"
                 }
             },
             "post_types": [

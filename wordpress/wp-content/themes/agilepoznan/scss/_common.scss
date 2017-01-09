@@ -135,6 +135,18 @@ article {
     }
 }
 
+.speakers {
+    @media(min-width: $screen-md) {
+        float: left;
+        width: 33%;
+
+        .speaker {
+            float: none;
+            width: auto;
+        }
+    }
+}
+
 .speaker {
     img {
         border: 5px solid $gray-light;
@@ -143,8 +155,11 @@ article {
     }
 
     .speaker-details {
+        margin-bottom: 1em;
+
         p {
             text-align: center;
+            margin-top: 0;
         }
 
         span {

@@ -1,6 +1,10 @@
 html {
     font-size: 18px;
+    position: relative;
+    min-height: 100%;
 }
+
+$footerHeight: 2rem;
 
 body {
     background-color: $black;
@@ -11,6 +15,7 @@ body {
     background-size: cover;
     color: $black;
     font-family: 'Hind', sans-serif;
+    margin-bottom: $footerHeight;
 
     @media(min-width: $screen-md) {
         background-image: url('./img/kadr-postit-992w.jpg');
@@ -38,10 +43,15 @@ a {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    height: $footerHeight;
+    width: 100%;
     background-color: rgba($gray-dark, 0.75);
     padding: .5rem;
     text-align: right;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 
     a {
         color: $white;

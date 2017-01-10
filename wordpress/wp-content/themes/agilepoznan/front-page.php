@@ -153,7 +153,7 @@ if ( count($second_meeting) ):
                 <p class="presentation-title"><a href="<?php echo $second_meeting["permalink"]; ?>"><?php echo $second_meeting["title"]; ?></a></p>
                 <p class="presentation-date"><?php echo $second_meeting["date"]; ?> <?php echo $second_meeting["time"]; ?></p>
                 <div class="presentation-excerpt"><?php echo $second_meeting["excerpt"]; ?></div>
-                <p class="presentation-read-more"><a href="<?php echo $first_meeting["permalink"]; ?>">Czytaj dalej</a></p>
+                <p class="presentation-read-more"><a href="<?php echo $second_meeting["permalink"]; ?>">Czytaj dalej</a></p>
             </div>
         </div>
         <a href="<?php echo esc_url( get_category_link( get_cat_ID( $meetings_category ) ) ); ?>" class="button">Zobacz nasze archiwum</a>

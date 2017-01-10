@@ -76,7 +76,7 @@ if ( $query->have_posts() ) {
         <p>Zapraszamy na nasze następne spotkanie lub kontakt poprzez grupę na LinkedIn.</p>
     </div>
     <div class="container">
-        <a href="https://www.linkedin.com/groups/4406793" class="button">Dołącz do grupy na LinkedIn</a>
+        <a href="https://www.linkedin.com/groups/4406793" class="button" target="_blank">Dołącz do grupy na LinkedIn</a>
     </div>
 </div>
 <?php

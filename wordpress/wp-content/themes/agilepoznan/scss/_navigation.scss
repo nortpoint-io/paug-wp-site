@@ -13,6 +13,24 @@
     }
 }
 
+#mainNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.affix {
+    background-color: rgba($gray-dark, 0.75);
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
+.affix-top {
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
 .main-navigation {
     text-align: right;
 

@@ -64,6 +64,7 @@ if ( $query->have_posts() ) {
     <?php
     endif;
     ?>
+    <a name="about"></a>
 </div>
 
 <div class="white-container">

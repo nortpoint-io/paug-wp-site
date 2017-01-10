@@ -67,17 +67,11 @@ if ( $query->have_posts() ) {
 </div>
 
 <div class="white-container">
-    <div class="container clearfix">
-        <h1>O Agile Poznań</h1>
-        <h2>O co w tym wszystkim chodzi</h2>
-        <img src="<?php bloginfo('template_directory') ?>/img/paug_logo_small.png" class="about-logo" alt="Agile Poznań"/>
-
-        <p class="about-description">Agile Poznań to grupa poświęcona zwinnemu zarządzaniu projektami tworzona przez lokalną społeczność w Poznaniu.</p>
-        <p>Zapraszamy na nasze następne spotkanie lub kontakt poprzez grupę na LinkedIn.</p>
-    </div>
-    <div class="container">
-        <a href="https://www.linkedin.com/groups/4406793" class="button" target="_blank">Dołącz do grupy na LinkedIn</a>
-    </div>
+    <?php
+    while ( have_posts() ) : the_post();
+        the_content();
+    endwhile;
+    ?>
 </div>
 <?php
 if ( count($first_meeting) ):

@@ -68,6 +68,7 @@ if ( $query->have_posts() ) {
 </div>
 
 <div class="white-container">
+    <?php get_sidebar( 'front-page' ); ?>
     <?php
     while ( have_posts() ) : the_post();
         the_content();

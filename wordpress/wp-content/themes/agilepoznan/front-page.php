@@ -11,7 +11,9 @@ if ( $query->have_posts() ) {
 		$query->the_post();
 
         if ( count(simple_fields_value("data")) > 0 ) {
-            if ( !count($first_meeting) ) {
+            if ( !count($first_meeting) 
+                || time() < simple_fields_value("data")["date_unixtime"] ) {
+                // next meeting
                 $first_meeting["date"] = simple_fields_value("data")["date_format"];
                 $first_meeting["time"] = date("H:i", simple_fields_value("data")["date_unixtime"]);
                 $first_meeting["place"] = simple_fields_value("miejsce");
@@ -25,6 +27,7 @@ if ( $query->have_posts() ) {
                 $first_meeting["excerpt"] = get_the_excerpt();
                 $first_meeting["permalink"] = get_permalink();
             } else if ( !count($second_meeting) ) {
+                // past meeting
                 $second_meeting["date"] = simple_fields_value("data")["date_format"];
                 $second_meeting["time"] = date("H:i", simple_fields_value("data")["date_unixtime"]);
                 $second_meeting["place"] = simple_fields_value("miejsce");

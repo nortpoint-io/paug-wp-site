@@ -41,10 +41,6 @@
             display: inline-block;
             padding: 0 0.1rem;
 
-            @media(min-width: $screen-md) {
-                padding: 0 1rem;
-            }
-
             &:first-child {
                 padding-left: 0;
             }
@@ -52,6 +48,18 @@
             &:last-child {
                 padding-right: 0;
             }
+        }
+
+        &.primary-menu {
+            > li {
+                @media(min-width: $screen-md) {
+                    padding: 0 1rem;
+                }
+            }
+        }
+
+        &.footer-menu {
+            margin: 0;
         }
     }
 

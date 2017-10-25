@@ -43,7 +43,7 @@ gulp.task('styles', () => {
 
 gulp.task('dev', ['styles'], () => {
 	browserSync.init({
-        proxy: 'localhost:8888'
+        proxy: 'localhost'
     });
 		
 	gulp.watch(`${SRC_DIR}/scss/*.scss`, ['styles']);
